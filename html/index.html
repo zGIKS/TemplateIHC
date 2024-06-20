@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="../css/Style1.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+</head>
+
+<body>
+  <nav class="topheader">
+    <ul class="menu-horizontal">
+      <a href="" class="logo">
+        <img height="40" width="50" src="../imagenes/logo_upc_red.png" alt="" />
+      </a>
+      <li><a href="#Inicio"><span class="icon-home3"></span>Inicio</a></li>
+      <li>
+        <a href="#"> <span class="icon-book"></span>Cursos</a>
+        <ul class="menu-vertical">
+          <li><a href="#HTML">HTML</a></li>
+          <li><a href="#CSS">CSS</a></li>
+          <li><a href="#JavaScript">JavaScript</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><span class="icon-clubs"></span>Inscripción</a></li>
+      <li><a href="../html/Contacto.html"><span class="icon-tux"></span>Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div id="Inicio">
+    <div class="Container_Inicio">
+      <div class="Texto_Inicio">
+        <h2>TEMAS</h2>
+        <ol>
+          <li><a href="#HTML">HTML</a></li>
+          <li><a href="#CSS">CSS</a></li>
+          <li><a href="#JavaScript">JavaScript</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 id="HTML">Definición de HTML</h3>
+  <p>Es un lenguaje de marcas utilizado para el desarrollo de páginas web. Ha sido establecido como estándar de diseño web por el W3C. Define la estructura y contenido que debe tener una web. No define el estilo visual que tendrá; para eso se usará CSS. Sobre HTML se desarrollan tecnologías para facilitar a los usuarios el diseño de una web.
+  </p>
+  <ul>
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/10GHKjgQIR0?si=SYGwMlYyORtiEnBK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </ul>
+
+  <hr>
+
+  <h3 id="CSS">Definición de CSS</h3>
+  <p>Es un lenguaje para definir la presentación de un documento estructurado escrito en HTML o XML. CSS es un lenguaje de hojas de estilo que describe la apariencia y formato de un documento escrito en el lenguaje de markup. Su propósito es enriquecer la apariencia de los documentos HTML.
+    .</p>
+  <ul>
+    <li><a href="https://www.ionos.es/digitalguide/paginas-web/diseno-web/que-es-css/" target="_blank">CSS</a></li>
+  </ul>
+
+  <hr>
+
+  <h3 id="JavaScript">Definición de JavaScript</h3>
+  <p>JavaScript es el nombre de un lenguaje de programación: es decir, un lenguaje formal que brinda instrucciones a una computadora (ordenador) para generar ciertos datos. Se utiliza sobre todo para producir recursos interactivos en una página web.
+  </p>
+  <ul>
+    <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank">JavaScript</a></li>
+  </ul>
+
+  <hr>
+
+  <!-- Formulario de inscripción movido debajo de la descripción de JavaScript -->
+  <div class="form-container">
+    <h2>Formulario de inscripción</h2>
+    <form>
+      <div>
+        <label for="nombres">1. Nombres:</label>
+        <input type="text" id="nombres" name="nombres">
+      </div>
+      <div>
+        <label for="apellidos">2. Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos">
+      </div>
+      <div>
+        <label for="email">3. E-mail:</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div>
+        <label for="curso">4. Curso:</label>
+        <input type="text" id="curso" name="curso">
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <div class="Container_SN">
+    <ul class="Banner_SN">
+      <li>
+        <img src="../imagenes/descarga.png" width="32" height="32">
+        <p><a href="https://www.x.com" target="_blank">Dame un Like<br> X </a></p>
+      </li>
+      <li>
+        <img src="../imagenes/descarga (1).png" width="50" height="32">
+        <p><a href="https://www.tinder.com" target="_blank">Dame un Like <br> Tinder </a></p>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
