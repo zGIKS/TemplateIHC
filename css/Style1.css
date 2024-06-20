@@ -2,14 +2,14 @@
 
 body {
     background-color: white;
-    font-family: 'Inter';   
+    font-family: 'Inter';
 }
 
-li {
+li, .Banner_SN li p, .form-container form label {
     font-family: monospace;
 }
 
-h1 {
+h1, h3 {
     color: red;
     text-align: center;
 }
@@ -27,8 +27,6 @@ p {
 }
 
 h3 {
-    color: red;
-    text-align: center;
     font-size: 30px;
 }
 
@@ -82,15 +80,12 @@ h3 {
     padding: 15px 15px 15px 20px;
 }
 
-form {
+form, .form-container form label {
     font-size: medium;
 }
 
 #Inicio {
-    background: url('../imagenes/Fondo.webp');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    background: url('../imagenes/Fondo.webp') no-repeat center/contain;
     padding-top: 100px;
     padding-bottom: 130px;
     color: white;
@@ -105,70 +100,93 @@ form {
 }
 
 .Texto_Inicio {
-    padding-left: 980px;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding: 30px 0 20px 980px;
     font-size: 30px;
     color: lightblue;
 }
 
 .Container_SN {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     position: fixed;
-    right: -130px;
+    right: -250px; /* Cambia el valor para ajustarlo al tamaño del menú */
     top: 230px;
-    width: 210px;
+    width: 250px; /* Ajusta este valor al ancho del menú */
     z-index: 1100;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px 0 0 10px; /* Ajusta las esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: right 0.5s ease;
+}
+
+.Container_SN.open {
+    right: 0;
+}
+
+.menu-indicator {
+    position: absolute;
+    left: -30px; /* Ajusta esta posición según sea necesario */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+}
+
+.Banner_SN {
+    list-style: none;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Banner_SN li {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Banner_SN li img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.Banner_SN li p {
+    display: inline-block;
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.Banner_SN li p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.Banner_SN li:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .video-container {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.Banner_SN {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-.Banner_SN li {
-    list-style-type: none;
-    background-color: white;
-    color: white;
-    height: 43px;
-    padding: 0%;
-    margin: 0px 0px 0px 0px;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-    cursor: pointer;
-}
-
-.Banner_SN li:hover {
-    margin-left: -115px;
-}
-
-.Banner_SN li p {
-    padding-top: 5px;
-    margin: 0px;
-    line-height: 16px;
-    font-size: 10px;
-}
-
-.Banner_SN li p a {
-    text-decoration: none;
-    color: blue;
-}
-
-.Banner_SN li img {
-    float: left;
-    margin: 5px 5px;
-    margin-right: 5px;
 }
 
 .form-container {
@@ -194,12 +212,6 @@ form {
     margin-bottom: 15px;
 }
 
-.form-container form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-}
-
 .form-container form input[type="text"],
 .form-container form input[type="email"] {
     padding: 10px;
@@ -222,3 +234,5 @@ form {
 .form-container form button:hover {
     background-color: #0056b3;
 }
+
+
